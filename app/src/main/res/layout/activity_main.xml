@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/intro_text"
+        android:textColor="@color/main_text"
+
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="68dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="28dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/cse"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/cse_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/csm"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/cse" />
+
+            <ImageButton
+                android:id="@+id/csm"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/csm_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/cse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cse"
+                app:layout_constraintTop_toTopOf="@+id/cse"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/csm" />
+
+            <ImageButton
+                android:id="@+id/ece"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="4dp"
+                android:contentDescription="@string/ece_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/it"
+                app:layout_constraintEnd_toStartOf="@+id/it"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/it"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ece" />
+
+            <ImageButton
+                android:id="@+id/it"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/it_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ece"
+                app:layout_constraintTop_toBottomOf="@+id/csm"
+                app:srcCompat="@drawable/it" />
+
+            <ImageButton
+                android:id="@+id/eee"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/eee_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/civil"
+                app:layout_constraintTop_toBottomOf="@+id/it"
+                app:srcCompat="@drawable/eee" />
+
+            <ImageButton
+                android:id="@+id/civil"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/civil_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/eee"
+                app:layout_constraintEnd_toStartOf="@+id/eee"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/eee"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/civil" />
+
+            <ImageButton
+                android:id="@+id/csd"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/csd_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/mech"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/civil"
+                app:srcCompat="@drawable/csd" />
+
+            <ImageButton
+                android:id="@+id/mech"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/mech_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/csd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/csd"
+                app:layout_constraintTop_toBottomOf="@+id/eee"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/mech" />
+
+            <ImageButton
+                android:id="@+id/cso"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/cso_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mining"
+                app:layout_constraintTop_toBottomOf="@+id/mech"
+                app:srcCompat="@drawable/cso" />
+
+            <ImageButton
+                android:id="@+id/mining"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="@string/mining_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/cso"
+                app:layout_constraintEnd_toStartOf="@+id/cso"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/csd"
+                app:srcCompat="@drawable/mining" />
+
+            <ImageButton
+                android:id="@+id/csc"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="205dp"
+                android:contentDescription="@string/csc_ContentDesc"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cso"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mining"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/csc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009"
+        app:srcCompat="@drawable/i" />
+</androidx.constraintlayout.widget.ConstraintLayout>
